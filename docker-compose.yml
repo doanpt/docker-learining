@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+  mysql:
+    image: mysql:latest
+    environment:
+        # database name, user and passwor. It must map with database config in application.properties
+      MYSQL_DATABASE: ecommerce
+      MYSQL_USER: doanpt
+      MYSQL_PASSWORD: 1234567890
+      MYSQL_ROOT_PASSWORD: 1234567890
+    volumes: 
+      - mysql-data:/var/lib/mysql
+      - ./obo.sql:/docker-entrypoint-initdb.d/init.sql
+  web:
+    image: ecommerce-spring:latest
+    ports:
+      - "8088:8080"
+    depends_on:
+      - mysql
+volumes:
+  mysql-data:

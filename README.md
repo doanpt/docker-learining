@@ -1,6 +1,26 @@
 ### OBO STADIUM WEBSITE
 Trang thương mại điện tử bán giày
 
+### Run app with docker-compose
+```shell
+docker build -t ecommerce-spring .
+docker-compose up -d
+```
+
+### Run app with docker without docker-compose
+```shell
+docker build -t ecommerce-spring .
+docker ps
+docker run -d mysql:latest
+docker run -d ecommerce-spring:latest
+```
+
+### Catch logs of container, run "run docker ps" to show container are running. find container_id that you want to see logs, then run docker logs with -t for timestamp and -f for following
+```shell
+docker ps
+docker logs -t -d <container_id>
+```
+
 ### Chạy app bằng maven
 
 ```shell
