@@ -1,16 +1,35 @@
 package com.company.demo.exception;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 import org.springframework.http.HttpStatus;
 
-@NoArgsConstructor
-@AllArgsConstructor
-@Getter
-@Setter
 public class ErrorResponse {
-    private HttpStatus status;
-    private String message;
+	private HttpStatus status;
+	private String message;
+
+	public ErrorResponse() {
+		super();
+	}
+
+	public ErrorResponse(HttpStatus status, String message) {
+		super();
+		this.status = status;
+		this.message = message;
+	}
+
+	public HttpStatus getStatus() {
+		return status;
+	}
+
+	public void setStatus(HttpStatus status) {
+		this.status = status;
+	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
 }

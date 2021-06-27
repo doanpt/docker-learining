@@ -4,7 +4,6 @@ import com.company.demo.entity.Brand;
 import com.company.demo.entity.Category;
 import com.company.demo.entity.Product;
 import com.company.demo.model.dto.DetailProductInfoDto;
-import com.company.demo.model.dto.ProductInfoDto;
 import com.company.demo.model.request.CreateProductReq;
 import com.github.slugify.Slugify;
 

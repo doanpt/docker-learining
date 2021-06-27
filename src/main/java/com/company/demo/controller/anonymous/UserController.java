@@ -13,8 +13,6 @@ import com.company.demo.security.CustomUserDetails;
 import com.company.demo.security.JwtTokenUtil;
 import com.company.demo.service.OrderService;
 import com.company.demo.service.UserService;
-import lombok.Getter;
-import org.dom4j.rule.Mode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
